@@ -33,12 +33,6 @@ export function Navbar() {
             </Link>
           ))}
           <Link
-            href={ROUTES.login}
-            className={`text-sm font-medium text-[#0A2540]/80 ${SITE.transition} hover:text-[#0070F3]`}
-          >
-            Log In
-          </Link>
-          <Link
             href={ROUTES.signup}
             className={`rounded-full bg-[#0070F3] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_rgba(0,112,243,0.25)] ${SITE.transition} hover:bg-[#0059d4] hover:shadow-[0_12px_32px_rgba(0,112,243,0.3)]`}
           >
@@ -77,15 +71,6 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link
-                href={ROUTES.login}
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-[#0A2540] hover:bg-[#E8F4FF]"
-              >
-                Log In
-              </Link>
-            </li>
             <li className="pt-2">
               <Link
                 href={ROUTES.signup}

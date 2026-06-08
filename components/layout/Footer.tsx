@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BRAND, LOGO_SRC, NAV_LINKS, ROUTES, SITE } from "@/lib/constants";
+import { BRAND, LOGO_SRC, NAV_LINKS, SITE } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -31,11 +31,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href={ROUTES.login} className={`text-sm text-[#64748B] ${SITE.transition} hover:text-[#0070F3]`}>
-                  Log In
-                </Link>
-              </li>
             </ul>
           </div>
 
