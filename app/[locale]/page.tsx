@@ -1,4 +1,5 @@
 import { CtaSection } from "@/components/sections/CtaSection";
+import { CorporateCredibilitySection } from "@/components/sections/CorporateCredibilitySection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { WhyChooseUsSection } from "@/components/sections/WhyChooseUsSection";
@@ -9,6 +10,7 @@ export default function HomePage() {
       <HeroSection />
       <ServicesSection />
       <WhyChooseUsSection />
+      <CorporateCredibilitySection />
       <CtaSection />
     </>
   );

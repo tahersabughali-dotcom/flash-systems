@@ -1,34 +1,48 @@
+"use client";
+
 import { CheckCircle2 } from "lucide-react";
-import { SITE, whyChooseUsData } from "@/lib/constants";
+import { useLocale } from "@/components/providers/LocaleProvider";
+import { getWhyChooseUsData, SITE } from "@/lib/constants";
 
 export function WhyChooseUsSection() {
+  const { dict, locale, brand } = useLocale();
+  const items = getWhyChooseUsData(dict);
+
   return (
     <section
-      id="why-us"
-      className="scroll-mt-24 border-y border-[#0070F3]/10 bg-gradient-to-b from-[#E8F4FF]/50 to-white py-20"
+      id="value"
+      className="scroll-mt-24 border-y border-[color-mix(in_srgb,var(--brand-primary)_10%,transparent)] bg-gradient-to-b from-[color-mix(in_srgb,var(--brand-light)_40%,transparent)] to-white py-24"
       aria-labelledby="why-us-heading"
     >
       <div className={SITE.container}>
-        <div className="mb-12 max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.32em] text-[#0070F3]">Why Choose Us</p>
-          <h2 id="why-us-heading" className="mt-3 text-3xl font-bold tracking-tight text-[#0A2540] sm:text-4xl">
-            Built for businesses that demand excellence
+        <div className="mb-14 max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--brand-primary)]">{dict.value.eyebrow}</p>
+          <h2 id="why-us-heading" className="mt-3 text-3xl font-bold tracking-tight text-[var(--brand-navy)] sm:text-4xl">
+            {dict.value.title}
           </h2>
-          <p className="mt-4 text-base leading-7 text-[#64748B]">
-            Flash Systems Ltd combines technology expertise, professional service delivery, and a commitment to
-            quality that enterprise clients trust.
+          <p className="mt-5 text-base leading-8 text-[var(--brand-muted)] sm:text-lg">
+            {dict.value.description ? (
+              dict.value.description
+            ) : (
+              <>
+                <span className="font-semibold text-[var(--brand-navy)]">{brand.shortName[locale]}</span> {dict.value.descriptionBefore}{" "}
+                <span className="font-semibold text-[var(--brand-navy)]">{dict.brand.hourlyRange}</span> {dict.value.descriptionAfter}
+              </>
+            )}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {whyChooseUsData.map((item) => (
+        <div
+          className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${items.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}
+        >
+          {items.map((item) => (
             <article
               key={item.id}
-              className="rounded-2xl border border-[#0070F3]/10 bg-white p-6 shadow-[0_8px_30px_rgba(0,112,243,0.05)]"
+              className="rounded-lg border border-[color-mix(in_srgb,var(--brand-primary)_10%,transparent)] bg-white p-6 shadow-[0_4px_20px_color-mix(in_srgb,var(--brand-primary)_5%,transparent)] transition-all duration-300 hover:border-[color-mix(in_srgb,var(--brand-primary)_20%,transparent)] hover:shadow-[0_8px_28px_color-mix(in_srgb,var(--brand-primary)_8%,transparent)]"
             >
-              <CheckCircle2 className="h-8 w-8 text-[#0070F3]" aria-hidden="true" />
-              <h3 className="mt-4 text-lg font-semibold text-[#0A2540]">{item.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-[#64748B]">{item.description}</p>
+              <CheckCircle2 className="h-7 w-7 text-[var(--brand-primary)]" aria-hidden="true" />
+              <h3 className="mt-4 text-lg font-semibold text-[var(--brand-navy)]">{item.title}</h3>
+              <p className="mt-2 text-sm leading-7 text-[var(--brand-muted)]">{item.description}</p>
             </article>
           ))}
         </div>

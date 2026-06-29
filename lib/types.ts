@@ -1,27 +1,18 @@
 /** Lucide icon names used in servicesData — mapped in ServiceCard */
-export type ServiceIconName =
-  | "Bot"
-  | "Code2"
-  | "Palette"
-  | "Megaphone"
-  | "Languages"
-  | "Headset"
-  | "Calculator"
-  | "Scale"
-  | "Users"
-  | "Building2";
+export type ServiceIconName = "Code2" | "CreditCard" | "LineChart";
 
 export interface ServiceItem {
   id: string;
   title: string;
   description: string;
   iconName: ServiceIconName;
-  route: string;
+  highlights: string[];
 }
 
 export interface NavigationLink {
   label: string;
   href: string;
+  external?: boolean;
 }
 
 export interface FeatureItem {

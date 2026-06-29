@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "Flash Systems Ltd | Elite B2B Software & Consulting",
+    "description": "Strategic technical solutions and financial software architecture. World-class British engineering at intelligent rates — custom software, FinTech, and enterprise consulting."
+  },
+  "nav": {
+    "services": "Services",
+    "whyUs": "Why Us",
+    "contact": "Contact",
+    "expressPortal": "Express Portal",
+    "startProject": "Start a Project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation"
+  },
+  "lang": {
+    "switchLabel": "العربية",
+    "switchLabelEn": "English"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "description": "Elite B2B software consultancy delivering world-class British engineering for enterprises that demand precision, security, and measurable ROI — without the overhead of traditional agencies.",
+    "copyright": "© 2026 Flash Systems Ltd. All rights reserved.",
+    "legalLine": "Flash Systems Ltd | Company No: 17307106 | Registered in England & Wales."
+  },
+  "brand": {
+    "name": "Flash Systems Ltd",
+    "description": "Elite B2B software consultancy delivering world-class British engineering for enterprises that demand precision, security, and measurable ROI — without the overhead of traditional agencies.",
+    "tagline": "Strategic Technical Solutions & Financial Software Architecture",
+    "heroSubtext": "We architect, build, and scale mission-critical software and financial systems for organisations that cannot afford mediocrity. Senior engineers. Rigorous delivery. Intelligent cost structures designed for maximum return.",
+    "hourlyRange": "$30–$40/hr"
+  },
+  "hero": {
+    "eyebrow": "Elite B2B Software & Consulting",
+    "startProject": "Start a Project",
+    "viewServices": "View Services"
+  },
+  "services": {
+    "eyebrow": "Core Capabilities",
+    "title": "Three pillars of elite delivery",
+    "description": "We concentrate on high-impact disciplines where engineering rigour and financial intelligence intersect — delivering outcomes that scale with your business, not against it.",
+    "items": [
+      {
+        "id": "custom-software",
+        "title": "Custom Software Development",
+        "description": "End-to-end product engineering led by senior British-trained developers — from cloud-native platforms to complex enterprise applications built for longevity and scale.",
+        "highlights": [
+          "Senior full-stack engineers with enterprise delivery experience",
+          "Cloud-native architecture (AWS, Azure, GCP)",
+          "API design, microservices, and platform modernisation",
+          "Dedicated squads or embedded engineers — your model, our rigour"
+        ]
+      },
+      {
+        "id": "fintech-payments",
+        "title": "FinTech & Payment Solutions",
+        "description": "Secure, compliant payment infrastructure and financial software engineered for high-volume transactions, regulatory scrutiny, and zero-compromise reliability.",
+        "highlights": [
+          "Payment gateway integration and orchestration layers",
+          "PCI-aware architecture and audit-ready documentation",
+          "Real-time settlement, reconciliation, and reporting systems",
+          "Scalable backends designed for financial-grade uptime"
+        ]
+      },
+      {
+        "id": "consulting",
+        "title": "Technical & Financial Consulting",
+        "description": "Strategic advisory that bridges engineering and finance — optimising technology spend, accelerating delivery, and aligning technical roadmaps with commercial outcomes.",
+        "highlights": [
+          "Technology due diligence and architecture reviews",
+          "Cost optimisation and vendor rationalisation",
+          "Financial modelling for software investments",
+          "Executive-level technical leadership on demand"
+        ]
+      }
+    ]
+  },
+  "value": {
+    "eyebrow": "Why Flash Systems",
+    "title": "World-class quality. Intelligent economics.",
+    "description": "",
+    "descriptionBefore": "occupies a rare position in the market: British software engineering standards at highly optimised rates. Elite senior developers from",
+    "descriptionAfter": "— engineered for maximum ROI without compromising on craft, security, or accountability.",
+    "items": [
+      {
+        "id": "british-engineering",
+        "title": "British Engineering Excellence",
+        "description": "Our delivery standard reflects world-class British software craftsmanship — disciplined processes, clean architecture, and engineering culture that enterprise CTOs trust."
+      },
+      {
+        "id": "cost-optimization",
+        "title": "Intelligent Cost Optimisation",
+        "description": "Access elite senior developers starting at highly optimised rates of $30–$40/hr — delivering top-tier output at a fraction of traditional agency costs for maximum ROI."
+      },
+      {
+        "id": "security",
+        "title": "Enterprise Security & Compliance",
+        "description": "Financial-grade security practices, rigorous code review, and compliance-aware delivery for regulated industries and high-stakes platforms."
+      },
+      {
+        "id": "partnership",
+        "title": "Strategic Partnership Model",
+        "description": "We operate as an extension of your leadership team — transparent communication, accountable milestones, and outcomes measured in business impact, not slide decks."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to architect your next platform?",
+    "description": "Partner with {{brandName}} for strategic technical leadership, financial software architecture, and delivery teams that operate at the highest standard — at a cost structure built for ROI.",
+    "button": "Request a Consultation"
+  },
+  "corporate": {
+    "eyebrow": "Corporate Credibility",
+    "title": "Strategic Excellence & Governance",
+    "legalStatus": "Flash Systems Ltd is a private company limited by shares, incorporated in England and Wales (Company Number: 17307106).",
+    "commitment": "We operate under stringent British corporate governance standards — prioritising engineering integrity, fiduciary responsibility, and long-term client partnership over short-term delivery metrics."
+  },
+  "serviceRequest": {
+    "metaTitle": "Express Service Portal | Flash Systems Ltd",
+    "metaDescription": "Submit an express service request for technical consultation, software development, or code review — secure PayPal payment and rapid response.",
+    "eyebrow": "Express Service Portal",
+    "title": "Fast-track your technical request",
+    "intro": "Select your service, describe your project brief, and complete payment via PayPal. Our team reviews every submission and responds within 24 hours.",
+    "backHome": "← Back to Home",
+    "formTitle": "Service request",
+    "formIntro": "Complete all fields below. Payment is enabled once your request details are provided.",
+    "securePaymentTitle": "Secure payment",
+    "securePaymentDescription": "Payments are processed via PayPal. Your project brief is sent to our team before you are redirected to complete payment.",
+    "services": [
+      {
+        "id": "technical-consultation",
+        "label": "Technical Consultation",
+        "fee": "$299"
+      },
+      {
+        "id": "software-development",
+        "label": "Software Development",
+        "fee": "$1,499"
+      },
+      {
+        "id": "code-review",
+        "label": "Code Review",
+        "fee": "$399"
+      }
+    ],
+    "form": {
+      "serviceType": "Service type",
+      "selectService": "Select a service",
+      "projectBrief": "Project brief",
+      "projectBriefPlaceholder": "Outline your objectives, current stack, timeline, and any constraints our team should know…",
+      "estimatedFee": "Budget / estimated fee",
+      "payButton": "Pay with PayPal",
+      "paying": "Submitting request…",
+      "payHint": "Select a service type and provide your project brief to enable payment.",
+      "errorRequired": "Please select a service and complete your project brief.",
+      "errorNotConfigured": "Notifications are not configured yet. Please contact us directly.",
+      "errorPayPal": "PayPal payment link is not configured. Please contact us to complete your request.",
+      "errorGeneric": "Something went wrong. Please try again or contact us directly.",
+      "successTitle": "Request received",
+      "successMessage": "Your request has been received. Our team will review your project and contact you within 24 hours."
+    }
+  },
+  "contact": {
+    "metaTitle": "Start a Project | Flash Systems Ltd",
+    "metaDescription": "Submit a project enquiry to Flash Systems Ltd — elite B2B software development, FinTech architecture, and strategic consulting.",
+    "eyebrow": "Project Enquiry",
+    "title": "Let's discuss your technical objectives",
+    "intro": "Complete the form below and our partnerships team will respond within one business day. We work with enterprises and growth-stage companies on mission-critical software and financial systems.",
+    "directLine": "Direct line",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "whatsappLink": "Message us on WhatsApp",
+    "backHome": "← Back to Home",
+    "formTitle": "Project onboarding form",
+    "formIntro": "All fields required. Typical engagements range from focused consulting to multi-year platform builds.",
+    "form": {
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Your full name",
+      "workEmail": "Work email",
+      "workEmailPlaceholder": "you@company.com",
+      "companyName": "Company name",
+      "companyPlaceholder": "Your organisation",
+      "projectScope": "Project scope",
+      "projectScopePlaceholder": "Describe your technical objectives, timeline, and any compliance or integration requirements…",
+      "estimatedBudget": "Estimated budget",
+      "selectBudget": "Select a range",
+      "submit": "Submit project enquiry",
+      "submitting": "Submitting enquiry…",
+      "privacy": "By submitting, you agree to be contacted regarding your enquiry. We never share your data with third parties.",
+      "errorRequired": "Please complete all fields before submitting.",
+      "errorEmail": "Please enter a valid work email address.",
+      "errorNotConfigured": "The contact form is not configured yet. Please email us directly or try again later.",
+      "errorGeneric": "Something went wrong. Please try again or email us directly.",
+      "successTitle": "Thank you for reaching out",
+      "successMessage": "We will review your project details and contact you shortly."
+    },
+    "budgetOptions": [
+      "Under $25,000",
+      "$25,000 – $75,000",
+      "$75,000 – $150,000",
+      "$150,000 – $500,000",
+      "$500,000+",
+      "Not sure yet"
+    ]
+  }
+}

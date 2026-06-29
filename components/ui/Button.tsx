@@ -15,16 +15,17 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "border border-[#0070F3] bg-[#0070F3] text-white shadow-[0_8px_24px_rgba(0,112,243,0.25)] hover:bg-[#0059d4]",
+    "border border-[var(--brand-primary)] bg-[var(--brand-primary)] text-white shadow-[0_4px_16px_color-mix(in_srgb,var(--brand-primary)_30%,transparent)] hover:bg-[var(--brand-primary-hover)]",
   secondary:
-    "border border-[#0070F3]/25 bg-white text-[#0A2540] hover:border-[#0070F3]/40 hover:bg-[#E8F4FF]",
-  ghost: "border border-transparent bg-transparent text-[#64748B] hover:bg-[#E8F4FF] hover:text-[#0070F3]",
+    "border border-[color-mix(in_srgb,var(--brand-primary)_25%,transparent)] bg-white text-[var(--brand-navy)] hover:border-[color-mix(in_srgb,var(--brand-primary)_40%,transparent)] hover:bg-[var(--brand-light)]",
+  ghost:
+    "border border-transparent bg-transparent text-[var(--brand-muted)] hover:bg-[var(--brand-light)] hover:text-[var(--brand-primary)]",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
   sm: "px-4 py-2 text-sm",
   md: "px-6 py-3 text-sm",
-  lg: "px-8 py-3.5 text-base",
+  lg: "px-8 py-3.5 text-sm",
 };
 
 export function Button({
@@ -37,7 +38,7 @@ export function Button({
   type = "button",
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-full font-semibold ${SITE.transition} ${variantStyles[variant]} ${sizeStyles[size]} ${fullWidth ? "w-full" : ""} disabled:cursor-not-allowed disabled:opacity-50 ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-lg font-semibold ${SITE.transition} ${variantStyles[variant]} ${sizeStyles[size]} ${fullWidth ? "w-full" : ""} disabled:cursor-not-allowed disabled:opacity-50 ${className}`;
 
   if (href) {
     return (

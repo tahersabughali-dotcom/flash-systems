@@ -1,59 +1,78 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import { BRAND, LOGO_SRC, NAV_LINKS, SITE } from "@/lib/constants";
+import { BrandLogo } from "@/components/ui/BrandLogo";
+import { useLocale } from "@/components/providers/LocaleProvider";
+import { BRAND_CONTACT, getContactEmail, getNavLinks, SITE } from "@/lib/constants";
 
 export function Footer() {
+  const { locale, dict, brand } = useLocale();
+  const navLinks = getNavLinks(locale, dict, brand);
+  const contactEmail = getContactEmail(brand);
+
   return (
-    <footer className="border-t border-[#0070F3]/10 bg-white">
+    <footer className="border-t border-[color-mix(in_srgb,var(--brand-primary)_10%,transparent)] bg-white">
       <div className={`${SITE.container} py-14`}>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Image
-              src={LOGO_SRC}
-              alt={`${BRAND.name} logo`}
-              width={170}
-              height={48}
-              className="h-11 w-auto object-contain"
-            />
-            <p className="mt-4 max-w-md text-sm leading-7 text-[#64748B]">{BRAND.description}</p>
+            <BrandLogo variant="footer" />
+            <p className="mt-5 max-w-md text-sm leading-7 text-[var(--brand-muted)]">
+              {dict.footer.description ?? dict.brand.description}
+            </p>
+            <p className="mt-3 text-xs font-medium text-[var(--brand-primary)]">{brand.serviceFocus[locale]}</p>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0070F3]">Navigation</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--brand-primary)]">
+              {dict.footer.navigation}
+            </p>
             <ul className="mt-4 space-y-2.5" role="list">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`text-sm text-[#64748B] ${SITE.transition} hover:text-[#0070F3]`}
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      className={`text-sm text-[var(--brand-muted)] ${SITE.transition} hover:text-[var(--brand-primary)]`}
+                      rel="noopener noreferrer"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`text-sm text-[var(--brand-muted)] ${SITE.transition} hover:text-[var(--brand-primary)]`}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0070F3]">Contact</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--brand-primary)]">
+              {dict.footer.contact}
+            </p>
             <a
-              href={BRAND.phoneHref}
-              className={`mt-4 block text-lg font-semibold text-[#0A2540] ${SITE.transition} hover:text-[#0070F3]`}
+              href={BRAND_CONTACT.phoneHref}
+              className={`mt-4 block text-lg font-semibold text-[var(--brand-navy)] ${SITE.transition} hover:text-[var(--brand-primary)]`}
             >
-              {BRAND.phone}
+              {BRAND_CONTACT.phone}
             </a>
             <a
-              href={`mailto:${BRAND.email}`}
-              className={`mt-2 block text-sm text-[#64748B] ${SITE.transition} hover:text-[#0070F3]`}
+              href={`mailto:${contactEmail}`}
+              className={`mt-2 block text-sm text-[var(--brand-muted)] ${SITE.transition} hover:text-[var(--brand-primary)]`}
             >
-              {BRAND.email}
+              {contactEmail}
             </a>
           </div>
         </div>
 
-        <p className="mt-12 border-t border-[#0070F3]/10 pt-8 text-center text-sm text-[#94A3B8]">
-          © 2026 {BRAND.name}. All rights reserved.
-        </p>
+        <div className="mt-12 space-y-3 border-t border-[color-mix(in_srgb,var(--brand-primary)_10%,transparent)] pt-8 text-center">
+          <p className="text-sm text-[#94A3B8]">{dict.footer.legalLine}</p>
+          <p className="text-sm text-[#94A3B8]">{dict.footer.copyright}</p>
+        </div>
       </div>
     </footer>
   );

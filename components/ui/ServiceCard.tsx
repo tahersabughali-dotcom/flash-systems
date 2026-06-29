@@ -1,32 +1,11 @@
-import Link from "next/link";
-import {
-  ArrowRight,
-  Bot,
-  Building2,
-  Calculator,
-  Code2,
-  Headset,
-  Languages,
-  Megaphone,
-  Palette,
-  Scale,
-  Users,
-  type LucideIcon,
-} from "lucide-react";
+import { Code2, CreditCard, LineChart, type LucideIcon } from "lucide-react";
 import type { ServiceIconName, ServiceItem } from "@/lib/types";
 import { SITE } from "@/lib/constants";
 
 const iconsMap: Record<ServiceIconName, LucideIcon> = {
-  Bot,
   Code2,
-  Palette,
-  Megaphone,
-  Languages,
-  Headset,
-  Calculator,
-  Scale,
-  Users,
-  Building2,
+  CreditCard,
+  LineChart,
 };
 
 interface ServiceCardProps {
@@ -37,22 +16,24 @@ export function ServiceCard({ service }: ServiceCardProps) {
   const Icon = iconsMap[service.iconName];
 
   return (
-    <Link
-      href={service.route}
-      className={`group flex h-full flex-col rounded-2xl border border-[#0070F3]/10 bg-white p-6 shadow-[0_8px_30px_rgba(0,112,243,0.06)] ${SITE.transition} hover:-translate-y-1 hover:border-[#0070F3]/25 hover:shadow-[0_16px_48px_rgba(0,112,243,0.12)]`}
+    <article
+      className={`flex h-full flex-col rounded-lg border border-[color-mix(in_srgb,var(--brand-primary)_10%,transparent)] bg-white p-8 shadow-[0_4px_24px_color-mix(in_srgb,var(--brand-primary)_6%,transparent)] ${SITE.transition} hover:border-[color-mix(in_srgb,var(--brand-primary)_20%,transparent)] hover:shadow-[0_8px_32px_color-mix(in_srgb,var(--brand-primary)_10%,transparent)]`}
     >
-      <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#E8F4FF] text-[#0070F3] ring-1 ring-[#0070F3]/10 group-hover:bg-[#0070F3] group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(0,112,243,0.25)]">
+      <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--brand-light)] text-[var(--brand-primary)] ring-1 ring-[color-mix(in_srgb,var(--brand-primary)_10%,transparent)]">
         <Icon className="h-6 w-6" aria-hidden="true" />
       </div>
-      <h3 className="text-lg font-semibold text-[#0A2540]">{service.title}</h3>
-      <p className="mt-3 flex-1 text-sm leading-6 text-[#64748B]">{service.description}</p>
-      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0070F3]">
-        View Service
-        <ArrowRight
-          className={`h-4 w-4 ${SITE.transition} group-hover:translate-x-1`}
-          aria-hidden="true"
-        />
-      </span>
-    </Link>
+      <h3 className="text-xl font-semibold tracking-tight text-[var(--brand-navy)]">{service.title}</h3>
+      <p className="mt-4 text-sm leading-7 text-[var(--brand-muted)]">{service.description}</p>
+      {service.highlights.length > 0 ? (
+        <ul className="mt-6 space-y-3 border-t border-[color-mix(in_srgb,var(--brand-primary)_8%,transparent)] pt-6" role="list">
+          {service.highlights.map((highlight) => (
+            <li key={highlight} className="flex gap-3 text-sm leading-6 text-[color-mix(in_srgb,var(--brand-navy)_80%,transparent)]">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--brand-primary)]" aria-hidden="true" />
+              {highlight}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </article>
   );
 }
